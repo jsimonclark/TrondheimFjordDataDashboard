@@ -23,8 +23,12 @@ def extract_coordinates(metadata):
     return latitude, longitude
 
 def read_metadata(metadata_file):
-    with open(metadata_file, 'r') as f:
-        metadata = json.load(f)
+    try:
+        with open(metadata_file, 'r') as f:
+            metadata = json.load(f)
+    except Exception as e:
+        print("Error reading metadata file:", e)
+        metadata = {}
     return metadata
 
 def create_json_ld(image_path, location_name, latitude, longitude, subjects):
@@ -65,9 +69,9 @@ def main():
     metadata = read_metadata(metadata_file)
 
     # Extract location information from metadata
-    location_name = metadata["locationCreated"]["name"]
-    latitude = metadata["locationCreated"]["geo"]["latitude"]
-    longitude = metadata["locationCreated"]["geo"]["longitude"]
+    location_name = metadata.get("locationCreated", {}).get("name", "")
+    latitude = metadata.get("locationCreated", {}).get("geo", {}).get("latitude", "")
+    longitude = metadata.get("locationCreated", {}).get("geo", {}).get("longitude", "")
 
     # Example subjects
     subjects = ["trash"]
@@ -97,8 +101,11 @@ def main():
 
             # Write JSON-LD to a file (with the same name as the image file but with .json extension)
             json_file_path = os.path.splitext(image_path)[0] + ".json"
-            with open(json_file_path, "w") as f:
-                f.write(json_ld_string)
+            try:
+                with open(json_file_path, "w") as f:
+                    f.write(json_ld_string)
+            except Exception as e:
+                print("Error writing JSON file:", e)
 
 if __name__ == "__main__":
     main()
