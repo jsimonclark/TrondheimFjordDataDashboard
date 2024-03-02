@@ -1,0 +1,4 @@
+# Ignore virtual environment directories
+venv_fjordhealthdashboard/
+
+# Other project-specific ignores...

@@ -1,0 +1,13 @@
+{
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    "locationCreated": {
+        "@type": "Place",
+        "name": "Bosberg, Norway",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 63.4266703,
+            "longitude": 10.1449617
+        }
+    }
+}

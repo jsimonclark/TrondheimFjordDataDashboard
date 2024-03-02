@@ -1,0 +1,3 @@
+exifread
+streamlit
+spyder-kernels==2.4.*
