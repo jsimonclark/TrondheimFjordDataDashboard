@@ -29,7 +29,7 @@ def read_metadata(metadata_file):
 
 def create_json_ld(image_path, location_name, latitude, longitude, subjects):
     # Construct raw URL of the image file on GitHub
-    raw_url = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/master/{image_path}"
+    raw_url = "https://raw.githubusercontent.com/temp/master/xxx"
     
     json_ld = {
         "@context": "http://schema.org",

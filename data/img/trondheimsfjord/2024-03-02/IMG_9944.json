@@ -1,0 +1,22 @@
+{
+    "@context": "http://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://raw.githubusercontent.com/temp/master/c:\\users\\simonc\\documents\\github-local\\fairdata\\fjordhealthdashboard\\data\\img\\trondheimsfjord\\2024-03-02\\IMG_9944.jpg",
+    "locationCreated": {
+        "@type": "Place",
+        "name": "Bosberg, Norway",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 63.4266703,
+            "longitude": 10.1449617
+        }
+    },
+    "keywords": [
+        "trash"
+    ],
+    "about": {
+        "@id": "https://www.wikidata.org/wiki/Q45701",
+        "@type": "Thing",
+        "name": "trash"
+    }
+}
