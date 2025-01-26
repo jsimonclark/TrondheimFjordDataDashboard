@@ -1,7 +1,7 @@
 {
     "@context": "http://schema.org",
     "@type": "ImageObject",
-    "contentUrl": "https://raw.githubusercontent.com/temp/master/c:\\users\\simonc\\documents\\github-local\\fairdata\\fjordhealthdashboard\\data\\img\\trondheimsfjord\\2024-03-02\\IMG_9947.jpg",
+    "contentUrl": "https://raw.githubusercontent.com/jsimonclark/FjordHealthDashboard/main/data/img/trondheimsfjord/2024-03-02/IMG_9947.jpg",
     "locationCreated": {
         "@type": "Place",
         "name": "Bosberg, Norway",

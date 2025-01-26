@@ -32,8 +32,12 @@ def read_metadata(metadata_file):
     return metadata
 
 def create_json_ld(image_path, location_name, latitude, longitude, subjects):
+    # Construct relative path of the image file
+    relative_path = os.path.relpath(image_path, os.getcwd())
+
     # Construct raw URL of the image file on GitHub
-    raw_url = "https://raw.githubusercontent.com/temp/master/xxx"
+    prefix = "https://raw.githubusercontent.com/jsimonclark/FjordHealthDashboard/main/"
+    raw_url = prefix + relative_path.replace("\\", "/")  # Replace backslashes with forward slashes
     
     json_ld = {
         "@context": "http://schema.org",
